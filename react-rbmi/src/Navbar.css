@@ -1,0 +1,13 @@
+nav{
+    background-color: #333;
+    overflow: hidden;
+}
+<div>
+   <h1>React Navbar</h1>
+            <ul>
+                <li>Home</li>
+                <li>How to wash cloths</li>
+                <li>Washing machine 101</li>
+                <li>About Ariel</li>
+            </ul>
+</div>

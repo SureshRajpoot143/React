@@ -1,0 +1,23 @@
+.firstPartOfTheMainSection{
+
+}
+.MainSection{
+    display: flex
+   
+}
+.MainSection h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: green    ;
+    
+}
+.MainSection h6 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: black;
+}
+.MainSection img {
+    width: 100%;
+    height: auto;
+    border-radius: px;
+}
