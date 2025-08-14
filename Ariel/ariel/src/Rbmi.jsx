@@ -1,8 +1,12 @@
 import { useState } from "react";
+import Table from './Table.jsx'
+
 
 
 function Rbmi() {
+    
 
+   let[users,setUsers]=useState([])
    let[data,setData]=useState({"email":"","name":""})
    const inputchange=(e)=>{
     const {name,value}=e.target
@@ -11,8 +15,16 @@ function Rbmi() {
 }
 const handleSubmit=(e)=>{
     e.preventDefault()
-    alert([data.email,data.name])
-}
+    // alert([data.email,data.name])
+    let user={
+        id:Date.now(),
+        name:data.name,
+        email:data.email
+    }
+    setUsers([...users,user])
+    console.log(users)
+
+// }
 
 //    const{email,setEmail}=useState("")
 //       console.log(email);
@@ -103,7 +115,7 @@ const handleSubmit=(e)=>{
     // }
     // const Increase=()=>{
             
-        // }
+        }
     return (
        
         <>
@@ -166,7 +178,7 @@ const handleSubmit=(e)=>{
                     return <li key={key}>{key}: {value}</li>
                 })}
             </ul> */}
-
+        <Table users={users}> </Table>
        
         </>
 

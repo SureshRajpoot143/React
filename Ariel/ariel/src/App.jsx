@@ -8,9 +8,10 @@ function App() {
   
   return (
     <div> 
-      <Asdfg/>
+      {/* <Asdfg/> */}
     
       <Rbmi> </Rbmi>
+      
       
     </div>
   
