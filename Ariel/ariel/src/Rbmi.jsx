@@ -107,7 +107,7 @@ const handleSubmit=(e)=>{
     return (
        
         <>
-         <form>
+         <form onSubmit={handleSubmit}>
           <input type="email" 
           placeholder="enter your email"
           value={data.email}
