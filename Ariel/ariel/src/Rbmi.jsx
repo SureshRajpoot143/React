@@ -3,10 +3,18 @@ import { useState } from "react";
 
 function Rbmi() {
     // let[data,setData]=useState("content")
-     let[data,setData]=useState (0)
+     let[data,setData]=useState ("normal")
+     const[dec,setDec]=useState(0)
+     const[inc,setInc]=useState(0)
+
 
 // let data="content"
 console.log(data);
+const handleDecrease = () => {
+    setDec(dec - 1);
+    setData(`Decrease ${dec - 1}`);
+}
+
 const clicking=()=>{
     setData("something")
     // data="something"
@@ -39,22 +47,40 @@ const clicking=()=>{
     // }
     const increase = () => {
 
-        setData((next)=>next + 1)
-        setData((next)=>next + 1)
+        // setData((next)=>next + 10)
+        setInc(inc+ 1);
+    setData(`Increase ${inc +1}`);
+
+        // setData((next)=>next + 1)
+
+        // setData((next)=>next + 1)
+        // setData((next)=>next + 1)
+       
+        // setData((next)=>next + 1)
+        // setData((next)=>next + 1)
+       
        
     }
     const decrease = () => {
-        setData((prev)=>prev - 1)
-        setData((prev)=>prev-1)
-        // setData(data - 1)
+        // setData((prev)=>prev - 1)
+        // setData((prev)=>prev-1)
+        //  setData((prev)=>prev - 1)
+        // setData((prev)=>prev-1)
+        setData(data - 10)
         //   setData(data - 1)
+        
     }
+    const Increase=()=>{
+            
+        }
     return (
         <>
         <div> {data}</div>
         <br/>
-        <button onClick={decrease}>Decrease by 1</button>
+        <button onClick={handleDecrease}>Decrease by 1</button>
         <button onClick={increase}>increse by 1</button>
+      
+
 
         {/* <button onClick={} style={{border:"solid red 2px"}}> onClick</button> */}
 
