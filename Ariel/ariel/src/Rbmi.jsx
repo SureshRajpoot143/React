@@ -2,24 +2,55 @@ import { useState } from "react";
 
 
 function Rbmi() {
+
+   let[data,setData]=useState({"email":"","name":""})
+   const inputchange=(e)=>{
+    const {name,value}=e.target
+    setData({...data,[name]:value})
+  
+}
+const handleSubmit=(e)=>{
+    e.preventDefault()
+    alert([data.email,data.name])
+}
+
+//    const{email,setEmail}=useState("")
+//       console.log(email);
+//    const emailchange=(e)=>{
+//     setEmail(e.traget.value)
+   
+//    }
+//     const namechange=(e)=>{
+//         setName=(e.traget.value)
+//         e.ssrDefault()
+//         alert([name,email])
+//     }
+//     const handleSubmit=(e)=>{
+//         e.preventDefault()
+//         alert([name,email])
+
+    // }
     // let[data,setData]=useState("content")
-     let[data,setData]=useState ("normal")
-     const[dec,setDec]=useState(0)
-     const[inc,setInc]=useState(0)
+    //  let[data,setData]=useState (".....")
+    //  const change=(e)=>{
+    //     setData(e.traget.value)
+   
+    //  const[dec,setDec]=useState(0)
+    //  const[inc,setInc]=useState(0)
 
 
 // let data="content"
-console.log(data);
-const handleDecrease = () => {
-    setDec(dec - 1);
-    setData(`Decrease ${dec - 1}`);
-}
+// console.log(data);
+// const handleDecrease = () => {
+//     setDec(dec - 1);
+//     setData(`Decrease ${dec - 1}`);
+// }
 
-const clicking=()=>{
-    setData("something")
-    // data="something"
-    alert("clikeed")
-}
+// const clicking=()=>{
+//     setData("something")
+//     // data="something"
+//     alert("clikeed")
+// }
     // const [data, setData] = useState("logged in")
     // const{email,password}=data
 
@@ -45,11 +76,11 @@ const clicking=()=>{
     //   e.preventDefault()
     //  email.trim()?alert("email enter"):alert("pls enter the vaild Email")
     // }
-    const increase = () => {
+    // const increase = () => {
 
         // setData((next)=>next + 10)
-        setInc(inc+ 1);
-    setData(`Increase ${inc +1}`);
+    //     setInc(inc+ 1);
+    // setData(`Increase ${inc +1}`);
 
         // setData((next)=>next + 1)
 
@@ -60,26 +91,49 @@ const clicking=()=>{
         // setData((next)=>next + 1)
        
        
-    }
-    const decrease = () => {
-        // setData((prev)=>prev - 1)
-        // setData((prev)=>prev-1)
-        //  setData((prev)=>prev - 1)
-        // setData((prev)=>prev-1)
-        setData(data - 10)
+    // }
+    // const decrease = () => {
+    //     // setData((prev)=>prev - 1)
+    //     // setData((prev)=>prev-1)
+    //     //  setData((prev)=>prev - 1)
+    //     // setData((prev)=>prev-1)
+    //     setData(data - 10)
         //   setData(data - 1)
         
-    }
-    const Increase=()=>{
+    // }
+    // const Increase=()=>{
             
-        }
+        // }
     return (
+       
         <>
-        <div> {data}</div>
-        <br/>
-        <button onClick={handleDecrease}>Decrease by 1</button>
-        <button onClick={increase}>increse by 1</button>
-      
+         <form>
+          <input type="email" 
+          placeholder="enter your email"
+          value={data.email}
+          name="email"
+          onChange={inputchange}
+          />  
+          <input type="text" 
+          placeholder="enter your name"
+          value={data.name}
+          name="name"
+          onChange={inputchange}
+          />
+          <input type='submit'
+          /> 
+        </form>
+
+     
+        {/* <div> {data}</div>
+        <br/> */}
+        {/* <button onClick={handleDecrease}>Decrease by 1</button>
+        <button onClick={increase}>increse by 1</button> */}
+       {/* <input */}
+    {/* //    value={data}
+    //    onChange={(e)=>console.log(e)}
+       */}
+       {/* /> */}
 
 
         {/* <button onClick={} style={{border:"solid red 2px"}}> onClick</button> */}
@@ -113,7 +167,9 @@ const clicking=()=>{
                 })}
             </ul> */}
 
+       
         </>
+
 
     );
 }
