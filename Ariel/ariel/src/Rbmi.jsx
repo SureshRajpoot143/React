@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Table from './Table.jsx'
+
 
 
 
@@ -116,6 +117,11 @@ const handleSubmit=(e)=>{
     // const Increase=()=>{
             
         }
+        useEffect(()=>{
+            console.log("from useEffect");
+
+        },[users])
+        console.log("from App");
     return (
        
         <>
