@@ -29,7 +29,7 @@ function Table({ users }) {
         <div>
             <>
                 {p_data["users_data"] && (
-                    <table style={styles}>
+                    <table border={1} style={styles}>
                         <thead>
                             <tr>
                                 <th>id</th>
